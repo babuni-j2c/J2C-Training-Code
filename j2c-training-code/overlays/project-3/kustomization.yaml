@@ -1,0 +1,6 @@
+namespace: project-04
+
+resources:
+  - ../../base
+  - namespace.yaml
+  - route.yaml

@@ -1,0 +1,6 @@
+namespace: project-07
+
+resources:
+  - ../../base
+  - namespace.yaml
+  - route.yaml

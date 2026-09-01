@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: j2c-app
+  name: j2c-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: j2c-app
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: j2c-app
+    spec:
+      containers:
+      - image: quay.io/j2ctechnologies/training/etherpad
+        name: etherpad
+        resources: {}
+status: {}
