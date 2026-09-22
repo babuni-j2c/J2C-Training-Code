@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: j2c-app
+spec:
+  replicas: 3
+  template:
+    spec:
+      containers:
+        - name: etherpad
+          resources:
+            requests:
+              cpu: "3000m"
+              memory: "4Gi"
+            limits:
+              cpu: "3000m"
+              memory: "4Gi"

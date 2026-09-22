@@ -1,0 +1,13 @@
+namespace: project-02
+
+resources:
+  - ../../base
+  - namespace.yaml
+#  - route.yaml
+
+
+patches:
+- path: patch.yaml
+  target:
+    kind: Deployment
+    name: j2c-app

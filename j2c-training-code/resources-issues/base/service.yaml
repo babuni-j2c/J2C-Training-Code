@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: j2c-app
+  name: j2c-app
+spec:
+  ports:
+  - name: 8080-9001
+    port: 8080
+    protocol: TCP
+    targetPort: 9001
+  selector:
+    app: j2c_app
+  type: ClusterIP
+status:
+  loadBalancer: {}
