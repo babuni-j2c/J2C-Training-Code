@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: j2c-app
+  name: j2c-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: j2c-app
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: j2c-app
+        access: external
+    spec:
+      containers:
+      - image: docker.io/saibabu/my-demo-app:v1.0.0
+        name: my-demo-app
+        ports:
+        - containerPort: 80
+        resources: 
+          requests:
+            cpu: 15m
+            memory: 80Mi
+status: {}
