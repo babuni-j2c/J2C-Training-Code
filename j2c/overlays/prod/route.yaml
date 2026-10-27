@@ -6,6 +6,7 @@ metadata:
     app: j2c-app
   name: j2c-app
 spec:
+  host: cluster-prod.apps.ns-test.cloud-lab.j2ctechnologies.intern
   port:
     targetPort: 80-80
   to:
