@@ -3,7 +3,7 @@ kind: Route
 metadata:
   name: j2c-route
 spec:
-  host: app4.aps.nstest.cloud-lab.j2ctechnologiexs.intern
+  host: app4.aps.nstest.cloud-llab.j2ctechnologiexs.intern
   to:
     kind: Service
     name: j2c_app
