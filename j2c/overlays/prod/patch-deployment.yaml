@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: j2c-app
+spec:
+  template:
+    spec:
+      containers:
+        - name: my-demo-app
+          resources:
+            requests:
+              cpu: 70m
+              memory: 400Mi

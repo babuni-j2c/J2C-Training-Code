@@ -1,0 +1,22 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: cluster-prod
+
+bases:
+- ../../base
+
+resources:
+  - route.yaml
+  - pvc.yaml 
+
+
+patches:
+- path: patch-deployment.yaml
+- patch: |-
+     - op: replace
+       path: /spec/replicas
+       value: 5
+  target:
+    kind: Deployment
+    name: j2c-app

@@ -1,0 +1,8 @@
+apiVersion: v1
+data:
+  age: "28"
+  student: shashi
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: demo-cm
